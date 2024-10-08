@@ -2,74 +2,87 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>My Web Page</title>
+  <title>Spelling Practice</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="container">
+    <!-- Display one word here -->
+    <div class="display-word"></div>
+
+    <!-- Word count display -->
+    <div class="word-count">Word 0 of 0</div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="next-word-button">Next Word</button>
+      <button id="repeat-word-button" disabled>Repeat Word</button>
+    </div>
+
+    <!-- Option buttons -->
+    <div class="option-buttons">
+      <input type="radio" id="option-show" name="show-say" value="show" checked>
+      <label for="option-show">Show</label>
+
+      <input type="radio" id="option-say" name="show-say" value="say">
+      <label for="option-say">Say</label>
+    </div>
+
+    <!-- Voice selection dropdown -->
+    <div class="voice-selection">
+      <label for="voice-select">Choose a Voice:</label>
+      <select id="voice-select"></select>
+    </div>
+  </div>
+
+  <!-- Hidden words list -->
   <div class="words">
-Background
-Because
-Bigger
-Biggest
-Building
-Built
-Burrito
-Burritoes
-Completely
-Dangerous
-Different
-Enchanted
-Enormous
-Fashioned
-Found
-Friend
-Helped
-Higher
-House
-Loved
-Motor
-Numbers
-Out
-Parents
-Person
-Place
-Poem
-Polluted
-Quite
-Read
-Right
-Second
-Secret
-Sincerely
-Smaller
-They
-Those
-Took
-Total
-Wearing
-When
-Why
-Wrote
-</div>
-
-<!-- Display one word here -->
-<div class="display-word">
-</div>
-
-<!-- Word count display -->
-<div class="word-count">Word 0 of 0</div>
-
-<button id="next-word-button">Next Word</button>
-<button id="repeat-word-button" disabled>Repeat Word</button>
-
-
-<!-- Add radio select to toggle between showing the word and saying it -->
-<input type="radio" name="show" value="show" checked>Show
-<input type="radio" name="show" value="say">Say
-
-<!-- Voice selection dropdown -->
-<label for="voice-select">Choose a Voice:</label>
-<select id="voice-select"></select>
+    Acquaintances
+    Background
+    Because
+    Bigger
+    Biggest
+    Boba Tea
+    Building
+    Built
+    Burrito
+    Burritoes
+    Completely
+    Dangerous
+    Different
+    Enchanted
+    Enormous
+    Fashioned
+    Found
+    Friend
+    Helped
+    Higher
+    House
+    Loved
+    Motor
+    Numbers
+    Out
+    Parents
+    Person
+    Place
+    Poem
+    Polluted
+    Quite
+    Read
+    Right
+    Second
+    Secret
+    Sincerely
+    Smaller
+    They
+    Those
+    Took
+    Total
+    Wearing
+    When
+    Why
+    Wrote
+  </div>
 
   <script src="scripts.js"></script>
 </body>

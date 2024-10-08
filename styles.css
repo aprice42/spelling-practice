@@ -1,33 +1,131 @@
+/* General styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.display-word {
+  font-size: 3em;
+  margin: 40px 0 20px;
+  color: #2c3e50;
+}
+
+.word-count {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #7f8c8d;
+}
+
 /* Hide the full list of words */
 .words {
   display: none;
 }
 
-.display-word {
-  font-size: 2em;
-  margin: 20px 0;
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-/* Word count styling */
-.word-count {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-/* Style buttons */
 button {
-  margin: 5px;
-  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+  padding: 14px 28px;
+  margin: 0 10px;
   font-size: 1em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
 }
 
 button:disabled {
-  opacity: 0.5;
+  background-color: #bdc3c7;
   cursor: not-allowed;
 }
 
-#voice-select {
-  margin: 5px;
-  padding: 5px;
+/* Option buttons styled as button group */
+.option-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.option-buttons input[type="radio"] {
+  display: none;
+}
+
+.option-buttons label {
+  background-color: #bdc3c7;
+  color: #fff;
+  padding: 14px 28px;
+  margin: 0 5px;
   font-size: 1em;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+
+.option-buttons input[type="radio"]:checked + label {
+  background-color: #db3495;
+}
+
+.option-buttons label:hover {
+  background-color: #b92971;
+}
+
+/* Voice selection */
+.voice-selection {
+  margin-bottom: 30px;
+}
+
+.voice-selection label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.voice-selection select {
+  padding: 8px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .display-word {
+    font-size: 2.5em;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .option-buttons {
+    flex-direction: column;
+  }
+
+  .option-buttons label {
+    margin: 5px 0;
+  }
 }

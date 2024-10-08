@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const wordCountDiv = document.querySelector('.word-count');
   const nextWordButton = document.getElementById('next-word-button');
   const repeatWordButton = document.getElementById('repeat-word-button');
-  const showOptions = document.querySelectorAll('input[name="show"]');
   const voiceSelect = document.getElementById('voice-select');
+
+  // Modify selectors for the new radio inputs
+  const showRadio = document.getElementById('option-show');
+  const sayRadio = document.getElementById('option-say');
 
   let currentIndex = 0;
   let shuffledWords = [];
@@ -71,9 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
     populateVoiceList(); // Call it initially in case voices are already loaded
   }
 
+  // Function to get the selected option
+  function getSelectedOption() {
+    return showRadio.checked ? 'show' : 'say';
+  }
+
   // Function to display or say a word
   function displayWord(word) {
-    const selectedOption = document.querySelector('input[name="show"]:checked').value;
+    const selectedOption = getSelectedOption();
 
     if (selectedOption === 'show') {
       displayWordDiv.textContent = word;
