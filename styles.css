@@ -1,0 +1,33 @@
+/* Hide the full list of words */
+.words {
+  display: none;
+}
+
+.display-word {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+/* Word count styling */
+.word-count {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Style buttons */
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#voice-select {
+  margin: 5px;
+  padding: 5px;
+  font-size: 1em;
+}
